@@ -1,0 +1,15 @@
+{
+  "name": "negwarn",
+  "version": "1.0.0",
+  "description": "NEGATIVITY KILLS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sprusr",
+  "license": "ISC",
+  "dependencies": {
+    "havenondemand": "^1.1.0",
+    "node-telegram-bot-api": "^0.20.0"
+  }
+}
