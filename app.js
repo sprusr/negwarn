@@ -4,7 +4,7 @@ var TelegramBot = require('node-telegram-bot-api');
 var bot = new TelegramBot(config.botkey, {polling: true});
 
 var havenondemand = require('havenondemand');
-var hod = new havenondemand.HODClient(conifg.hodkey, 'v1');
+var hod = new havenondemand.HODClient(config.hodkey, 'v1');
 
 var scores = {};
 
