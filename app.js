@@ -60,7 +60,7 @@ bot.on('text', function (msg) {
         scores[msg.chat.id].negThreshold = (scores[msg.chat.id].negThreshold/100)*scores[msg.chat.id].thresholdResetPercent;
       });
     }
-    if(scores[msg.chat.id] > 2) {
+    if(scores[msg.chat.id].score > scores[msg.chat.id].posThreshold) {
       getPos(function(pos) {
         bot.sendMessage(msg.chat.id, pos);
         scores[msg.chat.id].score = (scores[msg.chat.id].score/100)*scores[msg.chat.id].resetPercent;
