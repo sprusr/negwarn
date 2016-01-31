@@ -52,7 +52,7 @@ bot.on('text', function (msg) {
     scores[msg.chat.id].score += body.aggregate.score;
     console.log('From: ' + msg.from.first_name + ' Text: ' + msg.text);
     console.log(msg.chat.id + ' last score: ' + body.aggregate.score);
-    console.log(msg.chat.id + ' total score: ' + scores[msg.chat.id]);
+    console.log(msg.chat.id + ' total score: ' + scores[msg.chat.id].score);
     if(scores[msg.chat.id].score < scores[msg.chat.id].negThreshold) {
       getNeg(scores[msg.chat.id].offensiveMode, function(neg) {
         bot.sendMessage(msg.chat.id, neg);
